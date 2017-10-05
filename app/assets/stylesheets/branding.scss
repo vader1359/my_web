@@ -1,0 +1,15 @@
+// Handle colors
+$black-color: #565354;
+$white-color: #F6F3EA;
+$red-color: #FA705A;
+
+// Handle fonts
+@font-face {
+  font-family: "Avenir";
+  src: url("Avenir.ttc");
+}
+
+// Handle font-size
+$big-font: calc(14px + 1vw);
+$medium-font: calc(14px + 0.5vw);
+$small-font: calc(12px + 0.3vw);

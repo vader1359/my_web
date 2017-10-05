@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MyWeb</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>MyWeb</title>
+  <%= csrf_meta_tags %>
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+<body>
+  <div class="columns navbar level is-marginless">
+    <div class="column is-1 navbar-logo level">
+      <%= link_to image_tag("logo"), root_path %>
+    </div>
+    
+    <div class="column is-4 is-offset-6 navbar-links">
+        <div class="my-links">
+          <%= link_to "my Resume" %>
+          <%= link_to "Portfolio" %>
+          <!-- <%= link_to "Blog" %> -->
+          <%= link_to "Contact" %>
+        </div>
+    </div>
+    <div class="column is-2"></div>
+  </div>
+  <div class="columns is-centered">
+    <div class="column is-8 portfolio">
+      <%= yield %>
+    </div>
+  </div>
+  
+</body>
 </html>
