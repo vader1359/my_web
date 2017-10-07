@@ -1,0 +1,46 @@
+// Place all the styles related to the portfolio controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'branding';
+
+.project-image {
+  width: 80%;
+}
+.blank {
+  background-color: rgba(1, 1, 1, 0);
+  height: calc(30px + 3vw);
+}
+
+.project-description {
+  margin-left: calc(50px + 2vw);
+  margin-right: calc(50px + 2vw);
+}
+
+.next-project {
+  text-align: right;
+  font-size: calc(12px + 1vw);
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  text-align: right;
+  a {
+    color: $black-color;
+  }
+
+  a:hover {
+    color: $red-color;
+    transform: scale(1.2);
+  }
+}
+
+.project-title {
+  font-size: calc(14px + 1vw);
+  font-weight: bold;
+  color: $red-color;
+}
+
+.project-description {
+  font-size: calc(12px + 1vw);
+}
