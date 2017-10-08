@@ -111,3 +111,24 @@ body, html {
   color: $red-color;
 }
 
+.my-footer {
+  display: flex;
+  align-items: center;
+  height: calc(30px + 3vw);
+  text-align: center;
+  background: $black-color;
+  font-size: calc(12px + 0.5vw);
+  font-weight: bold;
+  
+
+  color: $white-color;
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: calc(14px + 0.5vw);
+    }
+  }
+}
