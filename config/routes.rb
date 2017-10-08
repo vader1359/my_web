@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'resume/index'
   get 'resume/test'
+  get 'contact' => 'contact#index'
 
   resources :portfolio
 

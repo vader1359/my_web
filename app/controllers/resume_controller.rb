@@ -3,4 +3,6 @@ class ResumeController < ApplicationController
   end
   def test
   end
+  def contact
+  end
 end

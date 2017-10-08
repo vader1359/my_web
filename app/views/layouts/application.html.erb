@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>MyWeb</title>
-
+  
   <%= csrf_meta_tags %>
   
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,9 +11,23 @@
 
 <body class="fade-in" >
   
+  <% if session[:seen] != true %>
+  <div class="modal is-active">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-4by3">
+        <%= image_tag "modal.svg" %>
+      </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  <% end %>
+  
+  <% session[:seen] = true %>
+  
   <nav class="nav">
     <div class="nav-left navbar-logo">
-        <%= link_to image_tag("logo.svg"), root_path %>
+      <%= link_to image_tag("logo.svg"), root_path %>
     </div>
     
     
@@ -28,9 +42,9 @@
     <!-- This "nav-menu" is hidden on mobile -->
     <!-- Add the modifier "is-active" to display it on mobile -->
     <div class="nav-right nav-menu is-marginless">
-        <%= link_to "my Resume", resume_index_path %>
-        <%= link_to "Portfolio", portfolio_path(id: 1) %>
-        <%= link_to "Contact", portfolio_path(id: 1) %>
+      <%= link_to "my Resume", resume_index_path %>
+      <%= link_to "Portfolio", portfolio_path(id: 1) %>
+      <%= link_to "Contact", contact_path %>
       
     </div>
   </nav>
