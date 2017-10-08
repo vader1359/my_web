@@ -34,7 +34,13 @@ document.addEventListener("turbolinks:load", function() {
     $(".nav-right").show();
   }
   
-  
+
+  if (window.location.pathname == "/resume/index") {
+    $($(".nav-right").children()[0]).css("color","#FA705A");
+  }
+  if (window.location.pathname.includes("portfolio")) {
+    $($(".nav-right").children()[1]).css("color","#FA705A");
+  }
   
   
 });
