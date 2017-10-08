@@ -23,8 +23,26 @@ body, html {
   font-family: "Avenir";
   background-color: rgb(204, 202, 195);
   height: 100%;
-  visibility: hidden;
+  
+  
   // padding-bottom: calc(4vw);
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.8s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 
@@ -58,7 +76,7 @@ body, html {
     color: $red-color !important;
     transform: scale(1.1)
   }
-
+  
   .nav-toggle {
     transform: scale(1.5)
   }
@@ -92,3 +110,4 @@ body, html {
 .is-red {
   color: $red-color;
 }
+
