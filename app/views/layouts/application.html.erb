@@ -9,21 +9,31 @@
 </head>
 
 <body>
-  <div class="columns navbar level is-marginless">
-    <div class="column is-1 navbar-logo level">
-      <%= link_to image_tag("logo"), root_path %>
+  
+  <nav class="nav">
+    <div class="nav-left navbar-logo">
+        <%= link_to image_tag("logo"), root_path %>
     </div>
     
-    <div class="column is-4 is-offset-6 navbar-links">
-        <div class="my-links">
-          <%= link_to "my Resume", resume_index_path %>
-          <%= link_to "Portfolio", portfolio_path(id: 1) %>
-          <!-- <%= link_to "Blog" %> -->
-          <%= link_to "Contact" %>
-        </div>
+    
+    <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+    <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+    <span class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    
+    <!-- This "nav-menu" is hidden on mobile -->
+    <!-- Add the modifier "is-active" to display it on mobile -->
+    <div class="nav-right nav-menu is-marginless">
+        <%= link_to "my Resume", resume_index_path %>
+        <%= link_to "Portfolio", portfolio_path(id: 1) %>
+        <%= link_to "Contact", portfolio_path(id: 1) %>
+      
     </div>
-    <div class="column is-2"></div>
-  </div>
+  </nav>
+  
   <div class="columns is-centered">
     <div class="column is-8 portfolio">
       <%= yield %>

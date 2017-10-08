@@ -15,6 +15,26 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+
+
 document.addEventListener("turbolinks:load", function() {
+  if ($(window).width() < 768) {
+    $(".nav-right").hide();
+    $(".nav-toggle").on("click", function() {
+      if ($(".nav-toggle").hasClass("is-red")) {
+        $(".nav-toggle").removeClass("is-red");
+        $(".nav-right").hide();
+      } else {
+        $(".nav-toggle").addClass("is-red");
+        $(".nav-right").show();
+      }
+    })
+  } else {
+    $(".nav-right").show();
+  }
+  
+  
+  
   
 });

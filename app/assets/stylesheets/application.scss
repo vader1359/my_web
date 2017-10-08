@@ -14,8 +14,9 @@
 *= require_self
 */
 
-@import "bulma";
 @import "branding";
+@import "bulma";
+
 
 body, html {
   font-family: "Avenir";
@@ -33,35 +34,52 @@ body, html {
 }
 
 // set color of background
-.navbar {
+.nav {
   padding: calc(20px + 3vw) calc(20px + 3vw);
   background-color: rgb(204, 202, 195);
   display: flex;
   justify-content: space-between;
-  .navbar-logo {
-    min-width: 100px;
-    width: 10vw;
+  align-items: center;
+  height: 7vw;
+  img {
+    height: 3vw;
+    width: auto;
+    min-height: 25px;
     margin: 0px;
   }
+  
+  my-link {
+    color: $black-color !important;
+  }
+  
+  my-link:hover {
+    color: $red-color !important;
+    transform: scale(1.1)
+  }
 
-  .my-links {
-    min-width: 450px;
+  .nav-toggle {
+    transform: scale(1.5)
+  }
+  
+  .nav-right {
+    max-width: 35%;
+    min-width: 350px;
     display: flex;
     justify-content: space-around;
     font-size: calc(14px + 1vw);
     color: $red-color;
     font-weight: bolder;
-
+    
     a {
       color: $black-color;
     }
-
+    
     a:hover {
       color: $red-color;
       transform: scale(1.1)
     }
-
-
+    
+    
   }
 }
 
@@ -69,6 +87,6 @@ body, html {
   background-color: $black-color;
 }
 
-.is-hidden {
-  display: none;
+.is-red {
+  color: $red-color;
 }
