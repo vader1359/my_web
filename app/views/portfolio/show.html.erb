@@ -6,9 +6,9 @@
     <div style="height: calc(15px + 1vw)" class="blank columns"></div>
     <div style="display: inline" class="column is-8 is-offset-3">
       <div class="next-project">
-        <span class="previous"><%= link_to 'previous' %></span>
+        <span class="previous"><%= link_to 'previous', portfolio_path(@current_project.id - 1) %></span>
         <span>&nbsp; | &nbsp; </span>
-        <span class="next"><%= link_to 'next' %></span>
+        <span class="next"><%= link_to 'next', portfolio_path(@current_project.id + 1) %></span>
       </div>
       
     </div>
