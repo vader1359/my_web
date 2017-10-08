@@ -3,7 +3,7 @@
     <%= image_tag @current_project.logo, style: "width: 100%;" %>
   </div>
   <div class="column is-4 project-description is-offset-1">
-      <div style="height: calc(15px + 1vw)" class="blank columns"></div>
+    <div style="height: calc(15px + 1vw)" class="blank columns"></div>
     <div style="display: inline" class="column is-8 is-offset-3">
       <div class="next-project">
         <span class="previous"><%= link_to 'previous' %></span>
@@ -31,3 +31,18 @@
 
 <div style="display: flex; justify-content: center;" class="columns project-title">SHOWCASE</div>
 <div class="blank columns"></div>
+
+<%= image_tag @current_project.showcase_img %>
+<% if @current_project.title == "others" %>
+<div class="black-bg">
+  <div class="blank columns"></div>
+  
+  <%= video_tag "cuisinian_video", autoplay: true, controls: true  %>
+  <div class="blank columns"></div>
+  <%= video_tag "dou_video", autoplay: false, controls: true %>
+  <div class="blank columns"></div>
+  <div class="blank columns"></div>
+</div>
+<div class="blank columns"></div>
+<%= image_tag "thanks_img" %>
+<% end %>
