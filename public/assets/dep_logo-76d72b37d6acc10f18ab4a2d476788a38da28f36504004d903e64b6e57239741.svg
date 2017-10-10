@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="299" height="287" viewBox="0 0 299 287">
+  <defs>
+    <rect id="dep_logo-a" width="75.264" height="75.264" rx="15.456"/>
+    <filter id="dep_logo-b" width="105.3%" height="105.3%" x="-2.7%" y="-2.7%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
+      <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+      <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(1)">
+    <rect width="599.709" height="1491" x="-1" fill="#F6F3EA"/>
+    <g transform="translate(-194 -202)">
+      <circle cx="236.968" cy="240.632" r="236.642" fill="#A5A39E"/>
+      <circle cx="220.663" cy="218.327" r="217.337" fill="#7D7B78"/>
+      <circle cx="126.117" cy="125.813" r="125.336" fill="#565354" transform="translate(127.86 128.948)"/>
+    </g>
+    <g transform="translate(46 42)">
+      <use fill="#E35B5F" xlink:href="#dep_logo-a"/>
+      <use fill="#000" filter="url(#dep_logo-b)" xlink:href="#dep_logo-a"/>
+      <text fill="#F3EFE7" font-family="CaviarDreams-Bold, Caviar Dreams" font-size="24.192" font-weight="bold">
+        <tspan x="14.085" y="44.226">Dep</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
