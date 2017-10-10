@@ -31,13 +31,6 @@ body, html {
   padding: 0px;
   box-shadow: 0px 0px 7px 2px $black-color;
   margin-bottom: calc(10vw);
-  height: auto;
-
-  .my-cv {
-    height: 100%;
-    width: 100%;
-    transform: scale(1.005)
-  }
 }
 
 // set color of background
@@ -94,11 +87,6 @@ body, html {
   background-color: $black-color;
 }
 
-<<<<<<< HEAD
-  }
-}
-=======
 .is-red {
   color: $red-color;
 }
->>>>>>> develop
